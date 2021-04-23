@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action(set C)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+ 
+  
+    <div class="ham__menu">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+    </div>
+ 
+    <div class="switch">
+      <input type="checkbox" class="swith__input">
+      <div class="switch__sliding"><p class="switch__sliding__text">TRAIN</p></div>
+   </div>
+
+   <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__item--link" href="../index.html">Main Page</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__A/action__A.html">Action (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__B/action__B.html">Action (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link active" href="#">Action (set C)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../adjective/adjective.html">Adjective</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__A/animal__A.html">Animal (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__B/animal__B.html">Animal (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../clothes/clothes.html">Clothes</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../emotions/emotions.html">Emotion</a></li>
+      </ul>
+  </nav>
+
+  <div class="star__container"></div>
+  <div class="star__container__two"></div>
+  <p class="demo"></p>
+  <button class = "game__over" onclick="init()">TRY AGAIN</button>
+</header>
+
+<section class="container">
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/argue.jpg" alt="argue">
+            <audio class="audio" src="sound/argue.mp3"></audio>
+          </div>
+            <p class="imgText">argue</p>
+            <div class="rotate" data-target=0></div>
+        </div>
+
+        <div class="container__item__back" data-target=0>
+          <img class="img" src="images/argue.jpg" alt="argue">
+          <p class="imgText">спорить</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/build.jpg" alt="build">
+            <audio class="audio" src="sound/build.mp3"></audio>
+          </div>
+            <p class="imgText">build</p>
+            <div class="rotate" data-target=1></div>
+        </div>
+
+      <div class="container__item__back" data-target=1>
+          <img class="img" src="images/build.jpg" alt="build">
+          <p class="imgText">строить</p>
+      </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/carry.jpg" alt="carry">
+            <audio class="audio" src="sound/carry.mp3"></audio>
+          </div>
+            <p class="imgText">carry</p>
+            <div class="rotate" data-target=2></div>
+        </div>
+
+        <div class="container__item__back" data-target=2>
+          <img class="img" src="images/carry.jpg" alt="carry">
+          <p class="imgText">нести</p>
+          </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/catch.jpg" alt="catch">
+            <audio class="audio" src="sound/catch.mp3"></audio>
+          </div>
+            <p class="imgText">catch</p>
+            <div class="rotate" data-target=3></div>
+        </div>
+
+        <div class="container__item__back" data-target=3>
+          <img class="img" src="images/catch.jpg" alt="catch">
+          <p class="imgText">ловить</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/drive.jpg" alt="drive">
+            <audio class="audio" src="sound/drive.mp3"></audio>
+          </div>
+            <p class="imgText">drive</p>
+            <div class="rotate" data-target=4></div>
+        </div>
+
+        <div class="container__item__back" data-target=4>
+          <img class="img" src="images/drive.jpg" alt="drive">
+          <p class="imgText">водить</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/drop.jpg" alt="drop">
+            <audio class="audio" src="sound/drop.mp3"></audio>
+          </div>
+            <div class="rotate" data-target=5></div>
+            <p class="imgText">drop</p>
+        </div>
+
+        <div class="container__item__back" data-target=5>
+          <img class="img" src="images/drop.jpg" alt="drop">
+          <p class="imgText">падать</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <audio class="audio" src="sound/push.mp3"></audio>
+            <img class="img" src="images/push.jpg" alt="push">
+          </div>
+            <p class="imgText">push</p>
+            <div class="rotate" data-target=6></div>
+        </div>
+
+        <div class="container__item__back" data-target=6>
+          <img class="img" src="images/push.jpg" alt="push">
+          <p class="imgText">толкать</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/pull.jpg" alt="pull">
+            <audio class="audio" src="sound/pull.mp3"></audio>
+          </div>
+            <p class="imgText">pull</p>
+            <div class="rotate" data-target=7></div>
+        </div>
+
+        <div class="container__item__back" data-target=7>
+          <img class="img" src="images/pull.jpg" alt="pull">
+          <p class="imgText">тянуть</p>
+        </div>
+    </div>
+ </section>
+
+ <div class="game__container">
+  <button class="btn btn_active">Start game</button>
+  <audio class="fail__sound" src="sound/fail.mp3"></audio>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

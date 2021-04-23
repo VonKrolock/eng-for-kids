@@ -1,0 +1,263 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  max-width: 1200px;
+  margin: auto;
+}
+header{
+  position: relative;
+}
+.nav{
+  height: 100%;
+}
+.ham__menu{
+  position: relative;
+}
+.toggler {
+  position: absolute;
+  top:52px;
+  left: 90px;
+  z-index: 3;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  opacity: 0;
+}
+.hamburger {
+  position: absolute;
+  top: 38px;
+  left: 90px;
+  z-index: 2;
+  width: 65px;
+  height: 60px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 4px;
+  background: #cdcdcd;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+.hamburger > div::before,
+.hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -10px;
+  width: 100%;
+  height: 4px;
+  background: inherit;
+  transition: all 0.2s ease-in-out;
+}
+.hamburger > div::after {
+  top: 10px;
+}
+.toggler:checked + .hamburger > div {
+  transform: rotate(45deg);
+}
+.toggler:checked + .hamburger > div::before{
+  display: none;
+}
+.toggler:checked + .hamburger > div::after{
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  position: fixed;
+  text-align:justify;
+  top: 0;
+  left: 0;
+  width: 27%;
+  height: 100%;
+  background:linear-gradient(#0099ae,#00bf82 100%);
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+.menu__item{
+  width: 140px;
+  list-style-type: none;
+  margin-top: 25px;
+}
+.menu__item--link{
+  font-size: 22px;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.active {
+  font-size: 22px;
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+.toggler:checked ~ .nav {
+  visibility: visible;
+}
+.menu-item{
+  font-weight: 900;
+  line-height: 2;
+  margin-top: -25px;
+  margin-right: 50px;
+}
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: end;
+  grid-gap:40px;
+  padding: 100px 0;
+}
+.container__item{
+  width: 220px;
+  height: 240px;
+  background:linear-gradient(180deg,#0099ae,#00bf82 40%,#fff 0,#fff);
+  border-radius: 5px;
+  padding: 45px 0;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  transition: all 0.5s;
+  text-align: center;
+}
+.container__item > a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.container__item > a img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 8px solid white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container__item:hover{
+  box-shadow: 2px 8px 18px 5px #888888;
+}
+
+.switch{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 35px;
+  margin-bottom: 15px;
+  margin: auto;
+  left: 425px;
+  top: 50px;
+  
+}
+
+.switch input{
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 80px;
+  height: 60px;
+  top: -10px;
+  
+}
+ input:checked + .switch__sliding,input:checked +.switch__sliding__text{
+  background: linear-gradient(40deg,#ffd86f,#fc6262);
+  text-align: end;
+  padding-right: 8px;
+}
+
+input:checked + .switch__sliding:after{
+  transform: translateX(-66px);
+  
+}
+
+.switch__sliding{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #ababab;
+  border-radius: 2px;
+  background:linear-gradient(#0099ae,#00bf82 100%,#fff 0,#fff);
+  width: 100px;
+  transition: all 0.3s ease;
+}
+.switch__sliding:after{
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  border-radius: 10%;
+  background-image: linear-gradient(180deg,#eee,#fff);
+ top: 1px;
+  right: 2px;
+  transition: all 0.3s ease;
+}
+
+.switch__sliding__text{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+
+@media(min-width:501px) and (max-width:768px){
+  .container{
+    grid-template-columns: auto auto;
+  }
+  .switch{
+    left:170px;
+  }
+  .toggler,.hamburger{
+    left: 125px;
+  }
+  .menu{
+    width: 40%;
+  }
+}
+
+@media(min-width:375px) and (max-width:500px){
+  .container{
+    grid-template-columns: auto;
+    margin:1rem;
+  }
+  .switch{
+    left:40px;
+  }
+  .toggler,.hamburger{
+    left: 69px;
+  }
+  .menu{
+    width: 70%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

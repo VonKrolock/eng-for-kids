@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Action__A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+ 
+  
+    <div class="ham__menu">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+    </div>
+ 
+    <div class="switch">
+      <input type="checkbox" class="swith__input">
+      <div class="switch__sliding"><p class="switch__sliding__text">TRAIN</p></div>
+   </div>
+  
+   <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__item--link" href="../index.html">Main Page</a></li>
+        <li class="menu__item"><a class="menu__item--link active" href="#">Action (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__B/action__B.html">Action (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__C/action__C.html">Action (set C)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../adjective/adjective.html">Adjective</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__A/animal__A.html">Animal (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__B/animal__B.html">Animal (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../clothes/clothes.html">Clothes</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../emotions/emotions.html">Emotion</a></li>
+      </ul>
+  </nav>
+
+  <div class="star__container"></div>
+  <div class="star__container__two"></div>
+  <p class="demo"></p>
+  <button class = "game__over" onclick="init()">TRY AGAIN</button>
+  
+
+</header>
+
+
+
+<section class="container">
+    <div class="container__item" >
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/cry.jpg" alt="cry">
+            <audio class="audio" src="sound/cry.mp3"></audio>
+          </div>
+            <p class="imgText">cry</p>
+            <div class="rotate" data-target=0></div>
+        </div>
+
+        <div class="container__item__back" data-target=0>
+          <img class="img" src="images/cry.jpg" alt="cry">
+          <p class="imgText">плакать</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/dance.jpg" alt="dance">
+            <audio class="audio" src="sound/dance.mp3"></audio>
+          </div>
+            <p class="imgText">dance</p>
+            <div class="rotate" data-target=1></div>
+        </div>
+
+      <div class="container__item__back" data-target=1>
+          <img class="img" src="images/dance.jpg" alt="dance">
+          <p class="imgText">танцевать</p>
+      </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/dive.jpg" alt="dive">
+            <audio class="audio" src="sound/dive.mp3"></audio>
+          </div>
+            <p class="imgText">dive</p>
+            <div class="rotate" data-target=2></div>
+        </div>
+
+        <div class="container__item__back" data-target=2>
+          <img class="img" src="images/dive.jpg" alt="dive">
+          <p class="imgText">нырять</p>
+          </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/draw.jpg" alt="draw">
+            <audio class="audio" src="sound/draw.mp3"></audio>
+          </div>
+            <p class="imgText">draw</p>
+            <div class="rotate" data-target=3></div>
+        </div>
+
+        <div class="container__item__back" data-target=3>
+          <img class="img" src="images/draw.jpg" alt="draw">
+          <p class="imgText">рисовать</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/fish.jpg" alt="fish">
+            <audio class="audio" src="sound/fish.mp3"></audio>
+          </div>
+            <p class="imgText">fish</p>
+            <div class="rotate" data-target=4></div>
+        </div>
+
+        <div class="container__item__back" data-target=4>
+          <img class="img" src="images/fish.jpg" alt="fish">
+          <p class="imgText">рыбачить</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/fly.jpg" alt="fly">
+            <audio class="audio" src="sound/fly.mp3"></audio>
+          </div>
+            <div class="rotate" data-target=5></div>
+            <p class="imgText">fly</p>
+        </div>
+
+        <div class="container__item__back" data-target=5>
+          <img class="img" src="images/fly.jpg" alt="fly">
+          <p class="imgText">летать</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <audio class="audio" src="sound/hug.mp3"></audio>
+            <img class="img" src="images/hug.jpg" alt="hug">
+          </div>
+            <p class="imgText">hug</p>
+            <div class="rotate" data-target=6></div>
+        </div>
+
+        <div class="container__item__back" data-target=6>
+          <img class="img" src="images/hug.jpg" alt="hug">
+          <p class="imgText">обнимать</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/jump.jpg" alt="jump">
+            <audio class="audio" src="sound/jump.mp3"></audio>
+          </div>
+            <p class="imgText">jump</p>
+            <div class="rotate" data-target=7></div>
+        </div>
+
+        <div class="container__item__back" data-target=7>
+          <img class="img" src="images/jump.jpg" alt="jump">
+          <p class="imgText">прыгать</p>
+        </div>
+    </div>
+</section>
+<div class="game__container">
+    <button class="btn btn_active">Start game</button>
+    <audio class="fail__sound" src="sound/fail.mp3"></audio>
+</div>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>

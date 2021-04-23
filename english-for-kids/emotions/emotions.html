@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+ 
+  
+    <div class="ham__menu">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+    </div>
+ 
+    <div class="switch">
+      <input type="checkbox" class="swith__input">
+      <div class="switch__sliding"><p class="switch__sliding__text">TRAIN</p></div>
+   </div>
+
+   <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__item--link" href="../index.html">Main Page</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__A/action__A.html">Action (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__B/action__B.html">Action (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__C/action__C.html">Action (set C)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../adjective/adjective.html">Adjective</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__A/animal__A.html">Animal (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__B/animal__B.html">Animal (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../clothes/clothes.html">Clothes</a></li>
+        <li class="menu__item"><a class="menu__item--link active" href="#">Emotion</a></li>
+      </ul>
+  </nav>
+
+  <div class="star__container"></div>
+  <div class="star__container__two"></div>
+  <p class="demo"></p>
+  <button class = "game__over" onclick="init()">TRY AGAIN</button>
+</header>
+
+<section class="container">
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/sad.jpg" alt="sad">
+            <audio class="audio" src="sound/sad.mp3"></audio>
+          </div>
+            <p class="imgText">sad</p>
+            <div class="rotate" data-target=0></div>
+        </div>
+
+        <div class="container__item__back" data-target=0>
+          <img class="img" src="images/sad.jpg" alt="sad">
+          <p class="imgText">грустный</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/angry.jpg" alt="angry">
+            <audio class="audio" src="sound/angry.mp3"></audio>
+          </div>
+            <p class="imgText">angry</p>
+            <div class="rotate" data-target=1></div>
+        </div>
+
+      <div class="container__item__back" data-target=1>
+          <img class="img" src="images/angry.jpg" alt="angry">
+          <p class="imgText">сердитый</p>
+      </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/happy.jpg" alt="happy">
+            <audio class="audio" src="sound/happy.mp3"></audio>
+          </div>
+            <p class="imgText">happy</p>
+            <div class="rotate" data-target=2></div>
+        </div>
+
+        <div class="container__item__back" data-target=2>
+          <img class="img" src="images/happy.jpg" alt="happy">
+          <p class="imgText">счастливый</p>
+          </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/tired.jpg" alt="tired">
+            <audio class="audio" src="sound/tired.mp3"></audio>
+          </div>
+            <p class="imgText">tired</p>
+            <div class="rotate" data-target=3></div>
+        </div>
+
+        <div class="container__item__back" data-target=3>
+          <img class="img" src="images/tired.jpg" alt="tired">
+          <p class="imgText">уставший</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/surprised.jpg" alt="surprised">
+            <audio class="audio" src="sound/surprised.mp3"></audio>
+          </div>
+            <p class="imgText">surprised</p>
+            <div class="rotate" data-target=4></div>
+        </div>
+
+        <div class="container__item__back" data-target=4>
+          <img class="img" src="images/surprised.jpg" alt="surprised">
+          <p class="imgText">удивленный</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/scared.jpg" alt="scared">
+            <audio class="audio" src="sound/scared.mp3"></audio>
+          </div>
+            <div class="rotate" data-target=5></div>
+            <p class="imgText">scared</p>
+        </div>
+
+        <div class="container__item__back" data-target=5>
+          <img class="img" src="images/scared.jpg" alt="scared">
+          <p class="imgText">испуганный</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <audio class="audio" src="sound/smile.mp3"></audio>
+            <img class="img" src="images/smile.jpg" alt="smile">
+          </div>
+            <p class="imgText">smile</p>
+            <div class="rotate" data-target=6></div>
+        </div>
+
+        <div class="container__item__back" data-target=6>
+          <img class="img" src="images/smile.jpg" alt="smile">
+          <p class="imgText">улыбка</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/laugh.jpg" alt="laugh">
+            <audio class="audio" src="sound/laugh.mp3"></audio>
+          </div>
+            <p class="imgText">laugh</p>
+            <div class="rotate" data-target=7></div>
+        </div>
+
+        <div class="container__item__back" data-target=7>
+          <img class="img" src="images/laugh.jpg" alt="laugh">
+          <p class="imgText">смех</p>
+        </div>
+    </div>
+ </section>
+ <div class="game__container">
+  <button class="btn btn_active">Start game</button>
+  <audio class="fail__sound" src="sound/fail.mp3"></audio>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

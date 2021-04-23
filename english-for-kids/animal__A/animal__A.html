@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal__A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+ 
+  
+    <div class="ham__menu">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+    </div>
+ 
+    <div class="switch">
+      <input type="checkbox" class="swith__input">
+      <div class="switch__sliding"><p class="switch__sliding__text">TRAIN</p></div>
+   </div>
+
+   <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__item--link" href="../index.html">Main Page</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__A/action__A.html">Action (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__B/action__B.html">Action (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../action__C/action__C.html">Action (set C)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../adjective/adjective.html">Adjective</a></li>
+        <li class="menu__item"><a class="menu__item--link active" href="#">Animal (set A)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../animal__B/animal__B.html">Animal (set B)</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../clothes/clothes.html">Clothes</a></li>
+        <li class="menu__item"><a class="menu__item--link" href="../emotions/emotions.html">Emotion</a></li>
+      </ul>
+  </nav>
+
+  <div class="star__container"></div>
+  <div class="star__container__two"></div>
+  <p class="demo"></p>
+  <button class = "game__over" onclick="init()">TRY AGAIN</button>
+</header>
+
+<section class="container">
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/cat.jpg" alt="cat">
+            <audio class="audio" src="sound/cat.mp3"></audio>
+          </div>
+            <p class="imgText">cat</p>
+            <div class="rotate" data-target=0></div>
+        </div>
+
+        <div class="container__item__back" data-target=0>
+          <img class="img" src="images/cat.jpg" alt="cat">
+          <p class="imgText">кот</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/chick.jpg" alt="chick">
+            <audio class="audio" src="sound/chick.mp3"></audio>
+          </div>
+            <p class="imgText">chick</p>
+            <div class="rotate" data-target=1></div>
+        </div>
+
+      <div class="container__item__back" data-target=1>
+          <img class="img" src="images/chick.jpg" alt="chick">
+          <p class="imgText">цыпленок</p>
+      </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/chicken.jpg" alt="chicken">
+            <audio class="audio" src="sound/chicken.mp3"></audio>
+          </div>
+            <p class="imgText">chicken</p>
+            <div class="rotate" data-target=2></div>
+        </div>
+
+        <div class="container__item__back" data-target=2>
+          <img class="img" src="images/chicken.jpg" alt="chicken">
+          <p class="imgText">курица</p>
+          </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/dog.jpg" alt="dog">
+            <audio class="audio" src="sound/dog.mp3"></audio>
+          </div>
+            <p class="imgText">dog</p>
+            <div class="rotate" data-target=3></div>
+        </div>
+
+        <div class="container__item__back" data-target=3>
+          <img class="img" src="images/dog.jpg" alt="dog">
+          <p class="imgText">собака</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/horse.jpg" alt="horse">
+            <audio class="audio" src="sound/horse.mp3"></audio>
+          </div>
+            <p class="imgText">horse</p>
+            <div class="rotate" data-target=4></div>
+        </div>
+
+        <div class="container__item__back" data-target=4>
+          <img class="img" src="images/horse.jpg" alt="horse">
+          <p class="imgText">лошадь</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/pig.jpg" alt="pig">
+            <audio class="audio" src="sound/pig.mp3"></audio>
+          </div>
+            <div class="rotate" data-target=5></div>
+            <p class="imgText">pig</p>
+        </div>
+
+        <div class="container__item__back" data-target=5>
+          <img class="img" src="images/pig.jpg" alt="pig">
+          <p class="imgText">свинья</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <audio class="audio" src="sound/rabbit.mp3"></audio>
+            <img class="img" src="images/rabbit.jpg" alt="rabbit">
+          </div>
+            <p class="imgText">rabbit</p>
+            <div class="rotate" data-target=6></div>
+        </div>
+
+        <div class="container__item__back" data-target=6>
+          <img class="img" src="images/rabbit.jpg" alt="rabbit">
+          <p class="imgText">кролик</p>
+        </div>
+    </div>
+
+    <div class="container__item">
+        <div class="container__item__front">
+          <div class="container__item__front__image">
+            <img class="img" src="images/sheep.jpg" alt="sheep">
+            <audio class="audio" src="sound/sheep.mp3"></audio>
+          </div>
+            <p class="imgText">sheep</p>
+            <div class="rotate" data-target=7></div>
+        </div>
+
+        <div class="container__item__back" data-target=7>
+          <img class="img" src="images/sheep.jpg" alt="sheep">
+          <p class="imgText">овца</p>
+        </div>
+    </div>
+ </section>
+ <div class="game__container">
+  <button class="btn btn_active">Start game</button>
+  <audio class="fail__sound" src="sound/fail.mp3"></audio>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
